@@ -1,2 +1,9 @@
 # running python unit tests files - all  files, folders stating with "tests"
-docker-compose run app sh -c "python manage.py test"
+docker-compose run app sh -c "python manage.py test && flake8"
+
+
+# create a new django app
+docker-compose run app sh -c "python manage.py startapp core"
+
+# migrate out customization to django
+docker-compose run app sh -c "python manage.py makemigrations core"
