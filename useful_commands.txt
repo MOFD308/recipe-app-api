@@ -1,0 +1,2 @@
+# running python unit tests files - all  files, folders stating with "tests"
+docker-compose run app sh -c "python manage.py test"
